@@ -15,8 +15,13 @@ public class Testing {
     }
 
     @Test
-    void testStringResult() {
+    void testBelowZeroResult() {
         Assert.assertEquals(FactorialCalc.factorial(-1), -1);
+
+    }
+    @Test
+    void testHundredResult() {
+        Assert.assertEquals(FactorialCalc.factorial(101), -1);
 
     }
 }
