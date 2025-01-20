@@ -3,11 +3,11 @@ package org.example;
 public class FactorialCalc {
 
     public static long factorial(int number) {
-        if (number < 0 || number > 100) {
-            System.out.println("Невозможно вычислить факториал");
-        }
+
         if (number == 0 || number == 1) {
             return 1;
+        } else if (number < 0 || number > 100) {
+            System.out.println("Невозможно вычислить факториал");
         } else {
             long result = 1;
             for (int i = 2; i <= number; i++) {
@@ -15,6 +15,7 @@ public class FactorialCalc {
             }
             return result;
         }
+        return -1;
     }
 }
 
