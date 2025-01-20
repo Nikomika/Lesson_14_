@@ -3,7 +3,7 @@ package org.example;
 public class FactorialCalc {
 
     public static long factorial(int number) {
-        if (number < 0 || number > 100) {
+        if (number < 0 || number >= 100) {
             System.out.println("Невозможно вычислить факториал");
         } else {
             if (number == 0 || number == 1) {
