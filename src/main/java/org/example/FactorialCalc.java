@@ -3,8 +3,9 @@ package org.example;
 public class FactorialCalc {
 
     public static long factorial(int number) {
-        if (number < 0 || number >= 100) {
-            System.out.println("Невозможно вычислить факториал");
+
+        if (number < 0 || number >= 20) {
+            throw new IllegalArgumentException("Невозможно вычислить факториал для числа " + number);
         } else {
             if (number == 0 || number == 1) {
                 return 1;
@@ -16,7 +17,6 @@ public class FactorialCalc {
                 return result;
             }
         }
-        return -1;
     }
 }
 
