@@ -14,14 +14,14 @@ public class Testing {
         Assert.assertEquals(FactorialCalc.factorial(0), 1);
     }
 
-    @Test
+    @Test(expectedExceptions = IllegalArgumentException.class)
     void testBelowZeroResult() {
-        Assert.assertEquals(FactorialCalc.factorial(-1), -1);
+        FactorialCalc.factorial(-1);
 
     }
-    @Test
+    @Test(expectedExceptions = IllegalArgumentException.class)
     void testHundredResult() {
-        Assert.assertEquals(FactorialCalc.factorial(101), -1);
+        FactorialCalc.factorial(25);
 
     }
 }

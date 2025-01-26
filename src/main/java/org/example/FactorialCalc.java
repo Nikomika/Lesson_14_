@@ -6,8 +6,8 @@ public class FactorialCalc {
 
         if (number == 0 || number == 1) {
             return 1;
-        } else if (number < 0 || number > 100) {
-            System.out.println("Невозможно вычислить факториал");
+        } else if (number < 0 || number > 20) {
+            throw new IllegalArgumentException("Невозможно вычислить факториал для числа " + number);
         } else {
             long result = 1;
             for (int i = 2; i <= number; i++) {
@@ -15,7 +15,6 @@ public class FactorialCalc {
             }
             return result;
         }
-        return -1;
     }
 }
 
